@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CPMS">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Android Test">
+        <parameter name="deviceName" value="Pixel2API34"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value=""/>
+        <classes>
+<!--                        <class name="base.Base"> </class>-->
+            <class name="testCases.PopUpTest"></class>
+            <class name="testCases.LoginTest"/>
+            <class name="testCases.CreateAccountTest"></class>
+            <class name="testCases.AccountFunctionTest"></class>
+
+
+        </classes>
+        <!--    </test><test verbose="2" preserve-order="true" name="IOS Test">-->
+        <!--    <parameter name="deviceName" value="Pixel2API34"/>-->
+        <!--    <parameter name="platformName" value="IOS"></parameter>-->
+        <!--    <parameter name="platformVersion" value=""></parameter>-->
+        <!--    <classes>-->
+        <!--        <class name="base.Base"> </class>-->
+        <!--    </classes>-->
+    </test>
+</suite>
